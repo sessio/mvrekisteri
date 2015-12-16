@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<!--
+  Eventually by HTML5 UP
+  html5up.net | @n33co
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>MV-Rekisteri</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header id="header" class="state_start">
+      <h1>Mitä vittua, olenko laittomassa henkilörekisterissä!!??</h1>
+      <p>Syötä nimi ja / tai puhelinnumero, ja tarkistamme onko googlen välimuistin tallentamissa csv-tiedostoissa vastaavia tietoja.</p>
+      <p>Syötettyjä tietoja ei talleteta tai lähetetä mihinkään verkon yli, käsittelemme ainoastaan tarkistussummia.</p>
+    </header>
+    
+    <h1 class="state_waiting" style="display:none;">Odota&hellip;</h1>
+
+    <!-- Signup Form -->
+    <form id="signup-form" class="state_start">
+      <input type="email" name="name" id="name" placeholder="Nimesi facebookissa" />
+      <input type="text" name="phone" id="phone" placeholder="Puhnro muodossa 050123456789" />
+      <input id="form_submit" type="submit" value="Tarkista" />
+    </form>
+
+    <div id="results" style="display:none;" class="state_results">
+      <h1 id="resultstext">lorem ipsum</h1>
+      <button id="reset_query">Uusi kysely</button>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="icons">
+        <li><a href="mailto:mitavittuarekisteri@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+      </ul>
+      <ul class="copyright">
+        <li>&copy; Ei ainakaan Ilja Janitskin.</li><li>Template: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </footer>
+
+    <!-- Scripts -->
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/1.1.1/js/md5.min.js"></script>
+    <script src="assets/js/query.js"></script>
+  </body>
+</html>

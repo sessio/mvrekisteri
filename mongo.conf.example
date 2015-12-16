@@ -1,0 +1,5 @@
+{
+  "collection": "collname",
+  "readwrite": "mongodb://user:pwd@dbname",
+  "readonly": "mongodb://user:pwd@dbname"
+}
