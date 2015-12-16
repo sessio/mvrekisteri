@@ -13,7 +13,7 @@ app.get('/api/find', (req, res) => {
   if (query) {
     checker.findEntries(query).then(data => {
       res.json({ results: data });
-    });
+    }, function(err) { res.json({ results: [], error: err }); });
   } else res.json({ results: [], error: "no query" });
 });
 
