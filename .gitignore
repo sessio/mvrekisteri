@@ -1,3 +1,4 @@
 node_modules
 mongo.conf
 data
+npm-debug.log

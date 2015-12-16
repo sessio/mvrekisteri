@@ -16,5 +16,8 @@
     "md5": "^2.0.0",
     "mongodb": "^2.0.52",
     "promise": "^7.0.4"
+  },
+  "scripts": {
+    "start": "node server.js"
   }
 }
