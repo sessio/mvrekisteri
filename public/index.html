@@ -18,11 +18,10 @@
 
     <!-- Header -->
     <header id="header" class="state_start">
-      <h1>Mitä vittua, olenko laittomassa henkilörekisterissä!!??</h1>
-      <p>Syötä nimi ja / tai puhelinnumero, ja tarkistamme onko googlen välimuistin tallentamissa csv-tiedostoissa vastaavia tietoja.</p>
-      <p>Syötettyjä tietoja ei talleteta tai lähetetä mihinkään verkon yli, käsittelemme ainoastaan tarkistussummia.</p>
+      <h1>Mitä vittua, olenko <strike>laittomassa</strike> henkilörekisterissä!!??</h1>
+      <p>Syötä nimi ja / tai puhelinnumero, ja tarkistamme onko googlen <a href="https://www.google.fi/search?q=inteltrix#q=site:146.185.186.21+inteltrix">Inteltrixiltä</a> välimuistiinsa tallentamissa csv-tiedostoissa vastaavia tietoja.</p>
     </header>
-    
+
     <h1 class="state_waiting" style="display:none;">Odota&hellip;</h1>
 
     <!-- Signup Form -->
@@ -31,6 +30,17 @@
       <input type="text" name="phone" id="phone" placeholder="Puhnro muodossa 050123456789" />
       <input id="form_submit" type="submit" value="Tarkista" />
     </form>
+
+    <div class="state_start">
+      <p>
+      Syötettyjä tietoja ei talleteta tai lähetetä mihinkään verkon yli, enkä pidä hallussa rekisterin aineistoa luettavassa muodossa, käsittelemme ainoastaan tarkistussummia.
+      </p>
+      <p><i>
+        Tiedot tarkistetaan vasten niitä tietoja, joita löytyi googlella haettaessa 16.12.2015, tämä ei varmastikaan vastaa koko kerättyä aineistoa mutta sisältää noin 10MB dataa.
+      </i></p>
+      </p>
+
+    </div>
 
     <div id="results" style="display:none;" class="state_results">
       <h1 id="resultstext">lorem ipsum</h1>
