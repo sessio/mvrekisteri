@@ -6,7 +6,7 @@
 -->
 <html>
   <head>
-    <title>MV-Rekisteri</title>
+    <title>Rekisterityökalu</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -18,8 +18,9 @@
 
     <!-- Header -->
     <header id="header" class="state_start">
-      <h1>Mitä vittua, olenko <strike>laittomassa</strike> henkilörekisterissä!!??</h1>
-      <p>Syötä nimi ja / tai puhelinnumero, ja tarkistamme onko googlen <a href="https://www.google.fi/search?q=inteltrix#q=site:146.185.186.21+inteltrix">Inteltrixiltä</a> välimuistiinsa tallentamissa csv-tiedostoissa vastaavia tietoja.</p>
+      <h1>Mitä vittua, olenko <strike>laittomassa</strike> henkilörekisterissä??!!</h1>
+			<p>Syötä nimi ja / tai puhelinnumero, niin tarkistamme onko googlen <a href="https://www.google.fi/search?q=inteltrix#q=site:146.185.186.21+inteltrix">Inteltrixiltä</a> välimuistiinsa tallentamissa csv-tiedostoissa vastaavia tietoja.</p>
+			<p>Jos annat nimen sekä puhelinnumeron, tarkistetaan ovatko molemmat samassa tietueessa.</p>
     </header>
 
     <h1 class="state_waiting" style="display:none;">Odota&hellip;</h1>
@@ -27,7 +28,7 @@
     <!-- Signup Form -->
     <form id="signup-form" class="state_start">
       <input type="email" name="name" id="name" placeholder="Nimesi facebookissa" />
-      <input type="text" name="phone" id="phone" placeholder="Puhnro muodossa 050123456789" />
+      <input type="text" name="phone" id="phone" placeholder="Puhnro muodossa 0501234567" />
       <input id="form_submit" type="submit" value="Tarkista" />
     </form>
 
@@ -36,7 +37,7 @@
       <b>Syötettyjä tietoja ei talleteta tai lähetetä mihinkään</b>, enkä pidä hallussani rekisterin aineistoa luettavassa tai kehenkään kohdennettavassa muodossa. Käsittelemme ainoastaan tarkistussummia.
       </p>
       <p><i>
-        Tiedot tarkistetaan vasten niitä tietoja, joita löytyi googlella haettaessa 16.12.2015, tämä ei varmastikaan vastaa koko Inteltrixin hallussa olevaa aineistoa mutta sisältää 153785 riviä henkilötietoja.
+      Tiedot tarkistetaan vasten 16.12.2015 tehdyn Google-haun tuloksena saatuja tietoja; tämä on varmasti vain pieni osa koko Inteltrixin hallussa olevaa aineistoa mutta sisältää 153785 riviä henkilötietoja.
       </i></p>
       </p>
 
@@ -53,7 +54,7 @@
         <li><a href="mailto:mitavittuarekisteri@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
       </ul>
       <ul class="copyright">
-        <li>&copy; Ei ainakaan Ilja Janitskin.</li><li>Template: <a href="http://html5up.net">HTML5 UP</a></li>
+        <li>Template: <a href="http://html5up.net">HTML5 UP</a></li>
       </ul>
     </footer>
 
