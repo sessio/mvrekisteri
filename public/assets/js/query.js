@@ -8,13 +8,16 @@ $(function() {
     if (phone) query.phone = md5(phone);
     setState("waiting");
     $.get('/api/find', { query: query }, function(data) {
-      var results = data.results;
-      $("#input_form").hide();
-      if (results.length == 0) {
-        $("#resultstext").text("Ei löytynyt tietoja.");
-      } else {
-        $("#resultstext").text("Löytyi "+results.length+ " tietuetta antamillasi tiedoilla. Pirauta fobballe!");
-      }
+			if (data.error) {
+				$("#resultstext").text("Virhe palvelussa :(");
+			} else {
+				var results = data.results;
+				if (results.length == 0) {
+	        $("#resultstext").text("Ei löytynyt tietoja.");
+	      } else {
+	        $("#resultstext").text("Löytyi "+results.length+ " tietuetta antamillasi tiedoilla. Pirauta fobballe!");
+	      }
+			}
       setState("finished");
     },
     "json");

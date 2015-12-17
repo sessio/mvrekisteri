@@ -6,18 +6,18 @@ var Promise = require('promise');
 var db;
 
 mongocl.connect(mongoconf.readonly, (err, _db) => {
+  console.log("connected to "+mongoconf.readonly);
   if (!err)  db = _db;
 });
 
 module.exports = {
   findEntries: function(query) {
-    console.log("querying for name "+query.name);
-    if (!db) reject();
     return new Promise((resolve, reject) => {
+      if (!db) reject("no db connection");
       var coll = db.collection(mongoconf.collection);
       coll.find(query).toArray((err, docs) => {
-        console.log(docs.length + " results found");
-        resolve(docs);
+        if (err) reject(err);
+        else resolve(docs);
       });
     });
   }
