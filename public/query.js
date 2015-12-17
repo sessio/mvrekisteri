@@ -8,16 +8,15 @@ $(function() {
     if (phone) query.phone = md5(phone);
     setState("waiting");
     $.get('/api/find', { query: query }, function(data) {
-			if (data.error) {
-				$("#resultstext").text("Virhe palvelussa :(");
-			} else {
-				var results = data.results;
-				if (results.length == 0) {
-	        $("#resultstext").text("Ei löytynyt tietoja.");
-	      } else {
-	        $("#resultstext").text("Löytyi "+results.length+" tietuetta antamillasi tiedoilla. Pirauta fobballe!");
-	      }
-			}
+      if (data.error) {
+        $("#resultstext").text("Virhe palvelussa :(");
+      } else {
+        if (data.results == 0) {
+          $("#resultstext").text("Ei löytynyt tietoja.");
+        } else {
+          $("#resultstext").text("Löytyi "+data.results+" osumaa antamillasi tiedoilla. Pirauta fobballe!");
+        }
+      }
       setState("finished");
     },
     "json");
@@ -36,8 +35,8 @@ function setState(state) {
     $(".state_results").hide();
     $(".state_waiting").hide();
   } else if (state === "finished") {
-		$("#name").val('');
-		$("#phone").val('');
+    $("#name").val('');
+    $("#phone").val('');
     $(".state_start").hide();
     $(".state_waiting").hide();
     $(".state_results").show();

@@ -17,12 +17,12 @@ app.get('/api/find', (req, res) => {
   console.log(query);
   if (query) {
     checker.findEntries(query).then(data => {
-      res.json({ results: data });
-    }, function(err) { 
+      res.json({ results: data.length });
+    }, function(err) {
       console.log("findEntries rejected: " + err);
-      res.json({ results: [], error: "mongo error" }); 
+      res.json({ results: 0, error: "mongo error" });
     });
-  } else res.json({ results: [], error: "no query" });
+  } else res.json({ results: 0, error: "no query" });
 });
 
 var server = app.listen(port, () => {
