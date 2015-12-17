@@ -15,7 +15,7 @@ $(function() {
 				if (results.length == 0) {
 	        $("#resultstext").text("Ei löytynyt tietoja.");
 	      } else {
-	        $("#resultstext").text("Löytyi "+results.length+ " tietuetta antamillasi tiedoilla. Pirauta fobballe!");
+	        $("#resultstext").text("Löytyi "+results.length+" tietuetta antamillasi tiedoilla. Pirauta fobballe!");
 	      }
 			}
       setState("finished");
@@ -28,7 +28,7 @@ $(function() {
     e.preventDefault();
     setState("start");
   });
-});
+})();
 
 function setState(state) {
   if (state === "start") {
@@ -36,6 +36,8 @@ function setState(state) {
     $(".state_results").hide();
     $(".state_waiting").hide();
   } else if (state === "finished") {
+		$("#name").val('');
+		$("#phone").val('');
     $(".state_start").hide();
     $(".state_waiting").hide();
     $(".state_results").show();
