@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/api/find', (req, res) => {
   var query = req.query['query'];
-  console.log("query:");
+  console.log("query " + new Date());
   console.log(query);
   if (query) {
     checker.findEntries(query).then(data => {
