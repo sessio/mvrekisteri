@@ -20,7 +20,7 @@ app.get('/api/find', (req, res) => {
       res.json({ results: data });
     }, function(err) { 
       console.log("findEntries rejected: " + err);
-      res.json({ results: [], error: err }); 
+      res.json({ results: [], error: "mongo error" }); 
     });
   } else res.json({ results: [], error: "no query" });
 });

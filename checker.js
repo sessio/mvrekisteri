@@ -16,7 +16,7 @@ module.exports = {
       if (!db) reject("no db connection");
       var coll = db.collection(mongoconf.collection);
       coll.find(query).toArray((err, docs) => {
-        if (err) reject(err);
+        if (err) reject("mongo error");
         else resolve(docs);
       });
     });
