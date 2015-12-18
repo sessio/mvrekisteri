@@ -1,3 +1,7 @@
+function getHash(cleartext) {
+	return md5(cleartext.trim().toLowerCase());
+}
+
 var SearchForm = React.createClass({
 	getInitialState: function() { return { name: "", phone: "" } },
 	handleNameChange: function(e) {
@@ -27,30 +31,6 @@ var SearchForm = React.createClass({
 	}
 });
 
-var State = React.createClass({
-	render: function() {
-		return (
-			<div className={ this.props.appState === this.props.showOn ? 'visible' : 'hidden' }>
-				{this.props.children}
-			</div>
-		)
-	}
-});
-
-function getHash(cleartext) {
-	return md5(cleartext.trim().toLowerCase());
-}
-
-var Results = React.createClass({
-	render: function() {
-		return (
-			<div>
-				<h1>Tuloksia {this.props.num} kappaletta</h1>
-			</div>
-		)
-	}
-});
-
 var AppComponent = React.createClass({
 	getInitialState: function() { return { appState: "start", results: 0 } },
 
@@ -61,7 +41,6 @@ var AppComponent = React.createClass({
 	doQuery: function(query) {
 		this.setState({ appState: "waiting" });
 		$.get('api/find', { query: query }, function(data, err) {
-			console.log(data);
 			this.setState({ results: data.results });
 			this.setState({ appState: "results" });
 		}.bind(this))
